@@ -129,7 +129,26 @@ public class ListaSimples <T>{
     }
 
     public void inverte() {
+        if (esta_vazia() || len == 1) {
+            return;
+        }
+
+        Nodo atual = primeiro;
+        Nodo anterior = null;
+        Nodo proximo;
+
+        while (atual != null) {
+            proximo = atual.proximo;
+            atual.proximo = anterior;
+            anterior = atual;
+            atual = proximo;
+        }
+
+        Nodo temp = primeiro;
+        primeiro = ultimo;
+        ultimo = temp;
     }
+
 
     public void limpa(){
         primeiro = null;
