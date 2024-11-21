@@ -96,4 +96,15 @@ public class ListaSequencialSimples {
         oderna_mescla(0, len, new Object[len]);
         area = area_ordenada;
     }
+
+    public void embaralha() {
+        Random gerador = new Random();
+        for (int i = 0; i < len; i++) {
+            int x = gerador.nextInt(0, len);
+            int y = gerador.nextInt(0, len);
+            Object armazena = area[x];
+            area[x] = area[y];
+            area[y] = armazena;
+        }
+    }
 }
