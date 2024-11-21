@@ -4,11 +4,58 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
+    static boolean ehIgual;
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+//        ListaSequencialSimples lista = new ListaSequencialSimples();
+//
+//        lista.adiciona("1");
+//        lista.adiciona("2");
+//        lista.adiciona("3");
+//        lista.adiciona("4");
+//        lista.adiciona("5");
+//        lista.embaralha();
+//
+//        for (int j=0; j < lista.comprimento(); j++) {
+//            System.out.println(lista.obtem(j));
+//        }
+
+        ListaSequencialSimples listaPalavras1 = new ListaSequencialSimples();
+        ListaSequencialSimples listaPalavras2 = new ListaSequencialSimples();
+
+        listaPalavras1.adiciona("gato");
+        listaPalavras1.adiciona("vaca");
+        listaPalavras1.adiciona("cachorro");
+        listaPalavras1.adiciona("tartaruga");
+
+        listaPalavras2.adiciona("vaca");
+        listaPalavras2.adiciona("cachorro");
+        listaPalavras2.adiciona("tartaruga");
+        listaPalavras2.adiciona("gato");
+
+        if (listaPalavras1.len != listaPalavras2.len) {
+            ehIgual = false;
+        } else {
+            for (int i = 0; i < listaPalavras1.len; i++) {
+                int indiceProcurado = listaPalavras2.procura(listaPalavras1);
+                if (indiceProcurado == -1) {
+                    ehIgual = false;
+                    break;
+                } else {
+                    ehIgual = true;
+                }
+            }
+            resultado();
+        }
+
+    }
+
+    public static void resultado() {
+        if (ehIgual) {
+            System.out.println("VERDADEIRO");
+        } else {
+            System.out.println("FALSO");
+        }
     }
 }
