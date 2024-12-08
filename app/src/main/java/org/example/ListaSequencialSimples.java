@@ -3,10 +3,12 @@
  */
 package org.example;
 
+import java.util.Random;
+
 public class ListaSequencialSimples {
     Object[] area;
     int len;
-    final int defcap = 8;
+    final int defcap = 10;
 
     public ListaSequencialSimples() {
         area = new Object[defcap];
