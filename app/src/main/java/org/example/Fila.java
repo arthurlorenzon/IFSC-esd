@@ -5,7 +5,7 @@ public class Fila {
     Object[] areaExpandida;
     int inicio, fim, n;
 
-    Fila(int capacidade) {
+    public Fila(int capacidade) {
         area = new Object[capacidade];
         inicio = 0;
         fim = 0;
