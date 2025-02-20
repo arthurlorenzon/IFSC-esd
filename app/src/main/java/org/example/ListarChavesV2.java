@@ -31,4 +31,13 @@ public class Main {
             System.out.println("Chave " + (i + 1) + ": " + chaves.obtem(i));
         }
     }
+
+//    Uma função útil para a tabela hash gera uma lista das chaves existentes em uma tabela. Essa
+//    função tem esta declaração em thash.h:
+//// Retorna uma lista contendo as chaves existentes na tabela hash "tab"
+//    lista_linear_t * thash_chaves(thash_t * tab);
+//    Acrescente essa função a sua tabela hash, e escreva um programa que mostre seu funcionamento
+//    nestes casos:
+//            1. Tabela hash vazia: a lista retornada deve também estar vazia
+//2. Tabela hash com algumas chaves (pelo menos 10): a lista deve conter todas as chaves existentes na tabela
 }
