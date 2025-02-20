@@ -35,4 +35,17 @@ public class RemoverValoresRepetidosV2 {
             System.out.println(matriculasUnicas.obtem(i));
         }
     }
+
+//    Um arquivo contém números de matrícula de alunos de uma escola. Foi detectado que existem
+//    números de matrícula repetidos nesse arquivo, e assim deseja-se removê-los. Ao final, o que se
+//    espera é que o arquivo contenha somente números de matrícula únicos.
+//    Escreva um programa que leia esse arquivo, e apresente na saída padrão os números de matrícula
+//            (excluindo os números repetidos). O nome do arquivo é informado como primeiro argumento de
+//    linha de comando. Seu programa deve apresentar esses números de forma ordenada, usando o
+//    ordenamento usual para string.
+//    Você pode testar seu programa com os arquivos contidos no arquivo compactado anexado a esta
+//    questão. Ele contém três pares de arquivos (X é um número):
+//            • arqX.txt: arquivo com matrículas repetidas
+//• resX.txt: arquivo sem matrículas repetidas
 }
+
