@@ -88,11 +88,32 @@ public class TabHash<K, V> {
     }
 
 
-    public void remover() {
+    public void remover(K chave) {
+        Integer val_hash = f_hash.apply(chave);
+        int posicao = val_hash % tab.comprimento();
 
+        ListaSequencial lista = (ListaSequencial) tab.obtem(posicao);
+        Par par = new Par(chave, null);
+
+        int indice = lista.procura(par);
+        if (indice != -1) {
+            lista.remove(indice);
+        }
     }
 
-    public void substituir() {
+    public void substituir(K chave, V novoValor) {
+        Integer val_hash = f_hash.apply(chave);
+        int posicao = val_hash % tab.comprimento();
 
+        ListaSequencial lista = (ListaSequencial) tab.obtem(posicao);
+        Par par = new Par(chave, null);
+
+        int indice = lista.procura(par);
+        if (indice != -1) {
+            Par existente = (Par) lista.obtem(indice);
+            existente.substituiValor(novoValor);
+        } else {
+            adiciona(chave, novoValor);
+        }
     }
 }
