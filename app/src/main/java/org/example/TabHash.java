@@ -116,4 +116,18 @@ public class TabHash<K, V> {
             adiciona(chave, novoValor);
         }
     }
+
+    public ListaSequencial thash_chaves() {
+        ListaSequencial chaves = new ListaSequencial();
+
+        for (int i = 0; i < tab.comprimento(); i++) {
+            ListaSequencial lista = (ListaSequencial) tab.obtem(i);
+            for (int j = 0; j < lista.comprimento(); j++) {
+                Par par = (Par) lista.obtem(j);
+                chaves.adiciona(par.obtemChave());
+            }
+        }
+
+        return chaves;
+    }
 }

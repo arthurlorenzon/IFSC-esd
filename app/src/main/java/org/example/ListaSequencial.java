@@ -41,4 +41,6 @@ public class ListaSequencial extends ListaSequencialSimples {
         }
         area[indice] = value;
     }
+
+
 }
