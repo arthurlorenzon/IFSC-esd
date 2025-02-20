@@ -32,7 +32,7 @@ public class TabHash<K, V> {
         }
     }
 
-    ListaSequencial tab;
+    protected ListaSequencial tab;
     Function<K, Integer> f_hash;
     final int DEFSIZE = 31;
 
